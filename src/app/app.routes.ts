@@ -7,7 +7,6 @@ export const routes: Routes = [
     loadComponent: () => import('./gifs/pages/dashboard-page/dashboard-page.component'),
     children:
    [
-
     {
     path: 'trending',
     loadComponent: () => import('./gifs/pages/trending-page/trending-page.component')
@@ -19,10 +18,14 @@ export const routes: Routes = [
     },
 
     {
+    path: 'history/:query',
+    loadComponent: () => import('./gifs/pages/gifs-history/gifs-history.component')
+    },
+
+    {
     path: '**',
     redirectTo: 'trending'
-  },
-
+    },
    ],
   },
 
